@@ -19,7 +19,7 @@ public static class AuthService
         if (username != "admin" || password != "password")
         {
             // TODO: Uncomment this line after you have created the CustomUnauthorizedException class
-            // throw new CustomUnauthorizedException("Invalid username or password");
+             throw new CustomUnauthorizedException("Invalid username or password");
         }
 
         return new User
@@ -53,6 +53,6 @@ public class Tests
     public void TestNonAdmin()
     {
         // TODO: Uncomment this line after you have created the CustomUnauthorizedException class
-        // Assert.Throws<CustomUnauthorizedException>(() => { AuthService.Authenticate("user555", "password"); });
+         Assert.Throws<CustomUnauthorizedException>(() => { AuthService.Authenticate("user555", "password"); });
     }
 }
